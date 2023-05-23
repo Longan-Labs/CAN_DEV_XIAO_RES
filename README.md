@@ -4,7 +4,7 @@ title: TBD
 keywords:
 - Grove
 image: TBD
-slug: Grove - D7S Vibration Sensor
+slug: xiao can
 last_update:
   date: 5/23/2023
   author: Stephen Lo
@@ -14,46 +14,44 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/NFC_ST25DV_RES/c7b51f84ceaca85c9e24df663dbf5c0c2bf3524d/images/2-101021093---Grove---NFC(ST25DV64KC)-font.jpg" alt="pir" width={600} height="auto" /></p>
 
-The Grove - D7S Vibration Sensor is a powerful earthquake detection module that provides real-time monitoring of seismic activities. It is based on the advanced D7S module developed by Omron Corporation, a leading manufacturer of sensing technology.
+The Xiao CAN Bus Expansion Board is specifically designed to work with the Seeed Studio Xiao development board, providing an easy and convenient way to add CAN bus communication functionality to your projects. CAN bus (Controller Area Network) is a widely used communication protocol in automotive, industrial, and other embedded systems, allowing for reliable and robust data exchange between different nodes.
 
-Featuring a high-precision three-axis accelerometer and sophisticated earthquake algorithms, the Grove - D7S Vibration Sensor offers accurate and reliable detection of seismic events. It can detect various types of vibrations and classify them based on their severity, providing valuable information for earthquake monitoring and safety applications.
+The integration of the MCP2515 controller and MCP2551 transceiver chips on the expansion board ensures seamless and efficient communication over the CAN bus. The MCP2515 controller handles the protocol management, message filtering, and error handling, while the MCP2551 transceiver converts the digital signals from the controller into the differential signals required for CAN bus communication.
 
-Designed with simplicity and versatility in mind, the Grove - D7S Vibration Sensor integrates seamlessly with Grove system, a modular prototyping platform. Its standardized interface allows for easy connection to Arduino boards and other compatible development platforms.
+With the Xiao CAN Bus Expansion Board, you can leverage the power of the Seeed Studio Xiao development board and its extensive ecosystem to create projects that require CAN bus communication. Whether you're working on automotive applications, industrial control systems, robotics projects, or IoT devices, this expansion board provides a reliable and compact solution for integrating CAN bus capabilities into your designs.
+
+The expansion board features a user-friendly terminal connection, allowing you to easily connect the CANH and CANL lines to the CAN bus network. The compact design of the board ensures compatibility with various project enclosures and facilitates seamless integration into your existing setups.
+
+By utilizing the Xiao CAN Bus Expansion Board, you can take advantage of the robustness, reliability, and scalability of the CAN bus protocol, enabling efficient data exchange, system control, and interconnectivity in your projects.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Features
 
-- High-Precision Accelerometer: Equipped with a three-axis accelerometer, the sensor provides accurate measurements of vibrations and seismic activity.
-- Real-Time Earthquake Detection: The Grove - D7S Vibration Sensor uses advanced algorithms to detect and classify seismic events in real time. It can differentiate between different magnitudes of earthquakes and provide corresponding alert signals.
-- Easy Integration with Grove System: The sensor features a Grove-compatible interface, allowing for easy connection to Arduino boards and other compatible platforms. No complex wiring or soldering is required, making it accessible to users of all skill levels.
-- Compact and Robust Design: The Grove - D7S Vibration Sensor has a compact form factor, making it suitable for various applications where space is limited. Its robust construction ensures durability and reliable performance, even in harsh environments.
-- Low Power Consumption: The sensor is designed to operate with low power consumption, making it suitable for long-term monitoring applications without draining the power source quickly.
+- Compatibility: Designed to work seamlessly with the Seeed Studio Xiao development board.
+- MCP2515 Controller: The onboard MCP2515 chip provides reliable control and handling of the CAN bus communication.
+- MCP2551 Transceiver: The integrated MCP2551 chip ensures accurate signal conversion and robust communication over the CAN bus.
+- Terminal Connection: The CANH and CANL lines are conveniently accessible through a 3-pin terminal, allowing easy connection to the CAN bus.
+- Compact Design: The expansion board has been designed with a compact form factor, making it suitable for various applications.
 
 ## Specification
 
-- Chip: D7S
-- Measurement Range: ±6g
-- Communication interface: I2C
-- Grove connector: 4-pin HY2.0
-- Operating voltage: 3.3/5V
-
-## In the Box
-
-![](https://raw.githubusercontent.com/Longan-Labs/NFC_ST25DV_RES/main/images/5-101021093---Grove---NFC(ST25DV64KC)-45fontall.jpg)
-- 1 x Grove - D7S Vibration Sensor Board
-- 1 x Grove Cable(20cm)
+- Compatibility: Seeed Studio Xiao development board.
+- Communication Interface: CAN bus (Controller Area Network).
+- CAN Transceiver: MCP2551.
+- CAN Controller: MCP2515.
+- Terminal Connection: 2-pin terminal for CANH and CANL lines.
 
 ## Applications
 
-The Grove - D7S Vibration Sensor can be used in a wide range of applications, including but not limited to:
+The Xiao CAN Bus Expansion Board can be utilized in various projects that require CAN bus communication. Here are a few application ideas to inspire you:
 
-- Earthquake Monitoring Systems: Deploying the sensor in buildings, bridges, and critical infrastructure allows for real-time monitoring of seismic activities. It enables early detection and alert systems, contributing to improved safety and disaster response.
-- Seismic Research and Analysis: Researchers can utilize the Grove - D7S Vibration Sensor to collect data for seismic studies and analysis. The sensor's high-precision measurements provide valuable insights into earthquake patterns and characteristics.
-- Structural Safety Assessment: The sensor can be integrated into structural health monitoring systems to evaluate the integrity and stability of buildings, bridges, and other structures. It helps identify potential structural weaknesses caused by seismic events.
-- IoT-based Seismic Monitoring Networks: By deploying multiple Grove - D7S Vibration Sensors in a network, it is possible to create a distributed system for comprehensive seismic monitoring over a larger area. This setup enables efficient data collection and analysis for improved earthquake preparedness.
+- Automotive Projects: Connect the expansion board to the Xiao and build automotive applications that require CAN bus communication, such as vehicle diagnostics or data logging.
+- Industrial Control Systems: Utilize the CAN bus capabilities to interface with industrial devices and systems, enabling efficient data exchange and control.
+- Robotics: Incorporate the expansion board into your robotic projects to enable communication between different robotic modules and components.
+- IoT Applications: Integrate the expansion board with IoT devices to facilitate communication and data exchange over the CAN bus protocol.
 
-These are just a few examples of the diverse applications that the Grove - D7S Vibration Sensor enables. Its versatility and high-performance make it a valuable tool in earthquake-related projects.
+Please refer to the Xiao CAN Bus Expansion Board datasheet and examples for detailed usage instructions and code samples.
 
 ## Hardware Overview
 
@@ -64,196 +62,116 @@ These are just a few examples of the diverse applications that the Grove - D7S V
 
 ## Getting Started
 
-:::note
-    If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-:::
-
-### Play With Arduino
 
 #### Hardware
-
-**Materials required**
-
-| Seeeduino V4.2 | Base Shield| Grove - D7S Vibration Sensor |
-|--------------|-------------|-----------------|
-|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/thumbnail.jpg" alt="pir" width={500} height="auto" /></p>|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank">Get One Now</a>|
-
-:::note
-    **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    
-    **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
-:::
-
-- **Step 1.** Connect Grove - D7S Vibration Sensor to **I2C** port of Grove-Base Shield.
-
-- **Step 2.** Plug Grove - Base Shield into Seeeduino.
-
-- **Step 3.** Connect Seeeduino to PC via a USB cable.
-
-
-| Seeeduino     | Grove - D7S Vibration Sensor |
-|---------------|-------------------------|
-| 3.3/5V        | Red                     |
-| GND           | Black                   |
-| SDA           | White                   |
-| SCL           | Yellow                  |
+This product does not include the Xiao module, so you will need to purchase a separate Xiao module. In this example, we use the XIAO ESP32C3 for demonstration purposes, but other versions of the Xiao module will work similarly. The hardware connection is straightforward - simply insert the Xiao module into the expansion board.
 
 #### Software
 
-- **Step 1.** Download the [Grove - D7S Vibration Sensor](https://github.com/Longan-Labs/d7s-grove-arduino) from Github.
+- **Step 1.** Download the [CAN Bus Library](https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515) from Github.
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-- **Step 3.** After downloading and installing the library correctly, you can find an example program named sample.ino in the examples folder. This program is designed for the D7S module.
+- **Step 3.** After downloading and installing the library correctly, you can find an example program named send.ino in the examples folder. This program is designed for the D7S module.
 
 ```Arduino
-#include <D7S.h>
+#include <mcp_can.h>
+#include <SPI.h>
 
-//old earthquake data
-float oldSI = 0;
-float oldPGA = 0;
+/* Please modify SPI_CS_PIN to adapt to different baords.
 
-//flag variables to handle collapse/shutoff only one time during an earthquake
-bool shutoffHandled = false;
-bool collapseHandled = false;
+   CANBed V1        - 17
+   CANBed M0        - 3
+   CAN Bus Shield   - 9
+   CANBed 2040      - 9
+   CANBed Dual      - 9
+   OBD-2G Dev Kit   - 9
+   OBD-II GPS Kit   - 9
+   Hud Dev Kit      - 9
+*/
 
-//function to handle collapse event
-void handleCollapse()
-{
-    //put here the code to handle the collapse event
-    Serial.println("-------------------- COLLAPSE! --------------------");
-}
+#define SPI_CS_PIN  9 
+
+MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
 void setup()
 {
-    // Open serial communications and wait for port to open:
-    Serial.begin(9600);
-    while (!Serial)
+    Serial.begin(115200);
+    while(!Serial);
+    
+    // below code need for OBD-II GPS Dev Kit Atemga32U4 version
+    // pinMode(A3, OUTPUT);
+    // digitalWrite(A3, HIGH);
+    
+    // below code need for OBD-II GPS Dev Kit RP2040 version
+    // pinMode(12, OUTPUT);
+    // digitalWrite(12, HIGH);
+    
+    while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
-        ; // wait for serial port to connect. Needed for native USB port only
+        Serial.println("CAN BUS FAIL!");
+        delay(100);
     }
-
-    Serial.print("Starting D7S communications (it may take some time)...");
-    //start D7S connection
-    D7S.begin();
-    //wait until the D7S is ready
-    while (!D7S.isReady())
-    {
-        Serial.print(".");
-        delay(500);
-    }
-    Serial.println("STARTED");
-
-    //setting the D7S to switch the axis at inizialization time
-    Serial.println("Setting D7S sensor to switch axis at inizialization time.");
-    D7S.setAxis(SWITCH_AT_INSTALLATION);
-
-    Serial.println("Initializing the D7S sensor in 2 seconds. Please keep it steady during the initializing process.");
-    delay(2000);
-    Serial.print("Initializing...");
-    //start the initial installation procedure
-    D7S.initialize();
-    //wait until the D7S is ready (the initializing process is ended)
-    while (!D7S.isReady())
-    {
-        Serial.print(".");
-        delay(500);
-    }
-    Serial.println("INITIALIZED!");
-
-    //check if there there was a collapse (if this is the first time the D7S is put in place the installation data may be wrong)
-    if (D7S.isInCollapse())
-    {
-        handleCollapse();
-    }
-
-    //reset the events shutoff/collapse memorized into the D7S
-    D7S.resetEvents();
-
-    Serial.println("\nListening for earthquakes!");
+    Serial.println("CAN BUS OK!");
 }
 
+unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
 void loop()
 {
-
-    //checking if there is an earthquake occuring right now
-    if (D7S.isEarthquakeOccuring())
-    {
-
-        //check if the shutoff event has been handled and if the shutoff condition is met
-        //the call of D7S.isInShutoff() is executed after to prevent useless I2C call
-        if (!collapseHandled && D7S.isInCollapse())
-        {
-            handleCollapse();
-            collapseHandled = true;
-        }
-
-        //print information about the current earthquake
-        float currentSI = D7S.getInstantaneusSI();
-        float currentPGA = D7S.getInstantaneusPGA();
-
-        if (currentSI > oldSI || currentPGA > oldPGA)
-        {
-            //getting instantaneus SI
-            Serial.print("\tInstantaneus SI: ");
-            Serial.print(currentSI);
-            Serial.println(" [m/s]");
-
-            //getting instantaneus PGA
-            Serial.print("\tInstantaneus PGA (Peak Ground Acceleration): ");
-            Serial.print(currentPGA);
-            Serial.println(" [m/s^2]\n");
-
-            //save the current data
-            oldSI = currentSI;
-            oldPGA = currentPGA;
-        }
-    }
-    else
-    {
-        //reset the old earthquake data
-        oldPGA = 0;
-        oldSI = 0;
-        //reset the flag of the handled events
-        shutoffHandled = false;
-        collapseHandled = false;
-        //reset D7S events
-        D7S.resetEvents();
-    }
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
 }
+
+// END FILE
 ```
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-- **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. you can generate some vibrations, for example, by tapping the table, and you will obtain the following results.
+- **Step 5.** After a successful code upload, you will notice that the RX and TX LEDs light up, indicating that the CAN bus is actively transmitting data. If your CAN bus is connected to other devices, these LEDs will blink instead of remaining constantly lit.
 
 ![](https://raw.githubusercontent.com/Longan-Labs/D7S_SENSOR_RES/main/images/result.png)
 
-## FAQ
-
-Q1: Can the Grove - D7S Vibration Sensor detect all types of earthquakes?
-
-A1: The Grove - D7S Vibration Sensor is designed to detect a wide range of seismic activities, including both minor and major earthquakes. However, the detection range and sensitivity may vary depending on the magnitude and proximity of the earthquake.
-
-Q2: Can I use the Grove - D7S Vibration Sensor with other development boards apart from Arduino?
-
-A2: Yes, the Grove - D7S Vibration Sensor is compatible with other development boards that support the I2C interface. Ensure that you have the necessary libraries and resources available for your chosen platform.
-
-Q3: What is the power requirement for the Grove - D7S Vibration Sensor?
-
-A3: The sensor can operate at either 3.3V
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/D7S_SENSOR_RES/raw/main/D7S%20Vibration%20Sensor.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## FAQ
+
+Q: What is the maximum baud rate supported by the Xiao CAN Bus Expansion Board?
+
+A: The maximum baud rate supported by the MCP2515 controller on the expansion board is 1 Mbps. Please ensure that the baud rate settings of your CAN bus network are compatible with this limitation.
+
+Q: Can I use multiple Xiao CAN Bus Expansion Boards in the same CAN bus network?
+
+A: Yes, you can use multiple expansion boards in the same CAN bus network. Each expansion board should have a unique node ID assigned to it to ensure proper communication and avoid conflicts on the bus.
+
+Q: Can I use the Xiao CAN Bus Expansion Board with other microcontrollers or development boards?
+
+A: The Xiao CAN Bus Expansion Board is specifically designed to work with the Seeed Studio Xiao development board. However, with proper pin mapping and configuration, it may be possible to use it with other microcontrollers or development boards that support the necessary CAN bus communication protocols.
+
+Q: Are there any limitations on the maximum cable length for the CAN bus connection?
+
+A: The maximum cable length for the CAN bus connection depends on factors such as the baud rate, cable quality, and electromagnetic interference. In general, for lower baud rates, longer cable lengths (up to several hundred meters) can be supported. However, for higher baud rates, it is recommended to keep the cable length shorter (within a few meters) to maintain reliable communication.
+
+Q: How can I troubleshoot CAN bus communication issues?
+
+A: If you encounter any issues with CAN bus communication, you can follow these steps for troubleshooting:
+
+- Verify the physical connections of the CAN bus network, ensuring correct wiring and termination.
+- Check the baud rate settings and ensure they match on all devices connected to the CAN bus.
+- Monitor the CAN bus traffic using a CAN bus analyzer or terminal software to identify any errors or issues in the transmitted messages.
+- Double-check the program code for proper initialization and configuration of the MCP2515 controller.
+- Ensure that the power supply to the Xiao development board and the CAN bus network is stable and within the specified voltage range.
+- If you have any other questions or issues not covered in this FAQ section, please feel free to contact our technical support team for further assistance.
+
 ## Resources
 
-- **[Zip]** [Grove - D7S Vibration Sensor](https://github.com/Longan-Labs/D7S_SENSOR_RES/raw/main/D7S%20Vibration%20Sensor.zip)
-- **[PDF]** [D7S Datasheet](https://github.com/Longan-Labs/D7S_SENSOR_RES/blob/main/en-d7s-957666.pdf)
-- **[GITHUB]** [D7S Arduino Library](https://github.com/Longan-Labs/d7s-grove-arduino)
+- **[Zip]** [Eagle file](https://github.com/stephen1874/CAN_DEV_XIAO_RES/raw/main/CAN_DEV_XIAO.zip)
+- **[PDF]** [Datasheet - MCP2515](https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf)
+- **[PDF]** [Datasheet - MCP2551](https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf)
+- **[GITHUB]** [MCP_CAN Library](https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515)
 
 ## Tech Support
 If you have any technical issue.  submit the issue into our [forum](https://forum.seeedstudio.com/).
