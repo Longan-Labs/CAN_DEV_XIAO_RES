@@ -129,8 +129,101 @@ void loop()
 
 - **Step 5.** After a successful code upload, you will notice that the RX and TX LEDs light up, indicating that the CAN bus is actively transmitting data. If your CAN bus is connected to other devices, these LEDs will blink instead of remaining constantly lit.
 
-![](https://raw.githubusercontent.com/Longan-Labs/D7S_SENSOR_RES/main/images/result.png)
 
+
+## Arduino Library
+
+We provide an [Arduino library for the MCP2515 board](https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515). 
+
+The library includes several examples, including:
+
+* ***OBDII-PIDs*** -  retrieve data from the OBD-II interface
+* ***send*** - send a frame to the CAN bus
+* ***recv*** - receive a frame from the CAN bus
+* ***set_mask_filter_recv*** - receive a frame from the CAN bus with mask and filter settings
+
+## ***APIs***
+--------------------------
+
+### 1. Set the Baud rate
+
+This function is used to initialize the baud rate of the CAN Bus system.
+
+The available baud rates are listed as follows:
+
+	#define CAN_5KBPS    1
+	#define CAN_10KBPS   2
+	#define CAN_20KBPS   3
+	#define CAN_25KBPS   4
+	#define CAN_31K25BPS 5
+	#define CAN_33KBPS   6
+	#define CAN_40KBPS   7
+	#define CAN_50KBPS   8
+	#define CAN_80KBPS   9
+	#define CAN_83K3BPS  10
+	#define CAN_95KBPS   11
+	#define CAN_100KBPS  12
+	#define CAN_125KBPS  13
+	#define CAN_200KBPS  14
+	#define CAN_250KBPS  15
+	#define CAN_500KBPS  16
+	#define CAN_666kbps  17
+	#define CAN_1000KBPS 18
+
+### 2. Set Receive Mask and Filter
+
+The controller chip has 2 receive mask registers and 5 filter registers that can be used to ensure that data is received from the targeted device. These registers are particularly useful in large networks with many nodes. We have provided two functions that allow you to utilize these mask and filter registers.
+
+**Mask:**
+
+	init_Mask(unsigned char num, unsigned char ext, unsigned char ulData);
+
+**Filter:**
+
+	init_Filt(unsigned char num, unsigned char ext, unsigned char ulData);
+
+- **num** represents which register to use. You can fill 0 or 1 for mask and 0 to 5 for filter.
+- **ext** represents the status of the frame. 0 means it's a mask or filter for a standard frame. 1 means it's for a extended frame.
+- **ulData** represents the content of the mask of filter.
+
+###3. Check Receive
+The MCP2515 controller chip has the ability to operate in either a polled mode or an interrupt mode. In polled mode, the software regularly checks for a received frame. In interrupt mode, additional pins can be used to signal that a frame has been received or transmit has completed. This allows for more efficient use of resources as the processor does not need to constantly check for incoming data.
+
+This function is used to check if there are any received frames waiting in the receive buffer. If there are, the function will return true, otherwise it will return false. You can use this function in a loop to continuously check for received frames. 
+
+    INT8U MCP_CAN::checkReceive(void);
+
+###4. Get CAN ID
+You can use the following function to get the length of the data received from the "send" node.
+
+    INT32U MCP_CAN::getCanId(void)
+
+###5. Send a frame
+
+    CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
+
+This function is used to send data onto the CAN Bus. The parameters are as follows:
+
+* **id** - The ID of can frame.
+* **ext** - A boolean value representing the status of the frame. '0' means standard frame. '1' means extended frame.
+* **len** - The length of the frame.
+* **data_buf** - The content of the message.
+
+For example, In the 'send' example, we have:
+
+    unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+    CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message 'stmp' to the bus and tell other devices this is a standard frame from 0x00.
+
+###6. Receive a frame
+
+The following function is used to receive data on the 'receive' node:
+
+    CAN.readMsgBuf(unsigned char len, unsigned char buf);
+    
+In conditions that masks and filters have been set. This function can only get frames that meet the requirements of masks and filters.
+
+* **len** represents the data length.
+* **buf** is where you store the data.
 
 ## Schematic Online Viewer
 
