@@ -12,11 +12,11 @@ last_update:
 
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/NFC_ST25DV_RES/c7b51f84ceaca85c9e24df663dbf5c0c2bf3524d/images/2-101021093---Grove---NFC(ST25DV64KC)-font.jpg" alt="pir" width={600} height="auto" /></p>
+  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/CAN_DEV_XIAO_RES/main/images/main.jpg" alt="pir" width={600} height="auto" /></p>
 
 The Xiao CAN Bus Expansion Board is specifically designed to work with the Seeed Studio Xiao development board, providing an easy and convenient way to add CAN bus communication functionality to your projects. CAN bus (Controller Area Network) is a widely used communication protocol in automotive, industrial, and other embedded systems, allowing for reliable and robust data exchange between different nodes.
 
-The integration of the MCP2515 controller and MCP2551 transceiver chips on the expansion board ensures seamless and efficient communication over the CAN bus. The MCP2515 controller handles the protocol management, message filtering, and error handling, while the MCP2551 transceiver converts the digital signals from the controller into the differential signals required for CAN bus communication.
+The integration of the MCP2515 controller and SN65HVD230 transceiver chips on the expansion board ensures seamless and efficient communication over the CAN bus. The MCP2515 controller handles the protocol management, message filtering, and error handling, while the SN65HVD230 transceiver converts the digital signals from the controller into the differential signals required for CAN bus communication.
 
 With the Xiao CAN Bus Expansion Board, you can leverage the power of the Seeed Studio Xiao development board and its extensive ecosystem to create projects that require CAN bus communication. Whether you're working on automotive applications, industrial control systems, robotics projects, or IoT devices, this expansion board provides a reliable and compact solution for integrating CAN bus capabilities into your designs.
 
@@ -30,7 +30,7 @@ By utilizing the Xiao CAN Bus Expansion Board, you can take advantage of the rob
 
 - Compatibility: Designed to work seamlessly with the Seeed Studio Xiao development board.
 - MCP2515 Controller: The onboard MCP2515 chip provides reliable control and handling of the CAN bus communication.
-- MCP2551 Transceiver: The integrated MCP2551 chip ensures accurate signal conversion and robust communication over the CAN bus.
+- SN65HVD230 Transceiver: The integrated SN65HVD230 chip ensures accurate signal conversion and robust communication over the CAN bus.
 - Terminal Connection: The CANH and CANL lines are conveniently accessible through a 3-pin terminal, allowing easy connection to the CAN bus.
 - Compact Design: The expansion board has been designed with a compact form factor, making it suitable for various applications.
 
@@ -38,7 +38,7 @@ By utilizing the Xiao CAN Bus Expansion Board, you can take advantage of the rob
 
 - Compatibility: Seeed Studio Xiao development board.
 - Communication Interface: CAN bus (Controller Area Network).
-- CAN Transceiver: MCP2551.
+- CAN Transceiver: SN65HVD230.
 - CAN Controller: MCP2515.
 - Terminal Connection: 2-pin terminal for CANH and CANL lines.
 
@@ -55,13 +55,17 @@ Please refer to the Xiao CAN Bus Expansion Board datasheet and examples for deta
 
 ## Hardware Overview
 
-### Pin Map
-
 <!-- ![](https://raw.githubusercontent.com/Longan-Labs/NFC_ST25DV_RES/main/images/pinmap.png) -->
-  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/NFC_ST25DV_RES/main/images/pinmap.png" alt="pir" width={600} height="auto" /></p>
+  <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/CAN_DEV_XIAO_RES/main/images/hw.jpg" alt="pir" width={600} height="auto" /></p>
+
+1. CANH
+2. GND
+3. CANL
+4. LED Indicators for RX/TX
+5. SN65NVD230
+6. MCP2515
 
 ## Getting Started
-
 
 #### Hardware
 This product does not include the Xiao module, so you will need to purchase a separate Xiao module. In this example, we use the XIAO ESP32C3 for demonstration purposes, but other versions of the Xiao module will work similarly. The hardware connection is straightforward - simply insert the Xiao module into the expansion board.
@@ -263,7 +267,7 @@ A: If you encounter any issues with CAN bus communication, you can follow these 
 
 - **[Zip]** [Eagle file](https://github.com/stephen1874/CAN_DEV_XIAO_RES/raw/main/CAN_DEV_XIAO.zip)
 - **[PDF]** [Datasheet - MCP2515](https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf)
-- **[PDF]** [Datasheet - MCP2551](https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf)
+- **[PDF]** [Datasheet - SN65HVD230](https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf)
 - **[GITHUB]** [MCP_CAN Library](https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515)
 
 ## Tech Support
